@@ -4,6 +4,7 @@ import { Container } from '@/components/common/Container';
 import { Button } from '@/components/common/Button';
 import { Badge } from '@/components/common/Badge';
 import { ArrowRight, Sparkles, Building2, GraduationCap, Code2 } from 'lucide-react';
+import { GithubIcon } from '@/components/common/Icons';
 
 export function HeroSection() {
   return (
@@ -53,6 +54,17 @@ export function HeroSection() {
             </Button>
             <Button href="#orbion" variant="ghost" size="lg" className="border border-[#E5E5EA]">
               Orbion Technologies
+            </Button>
+            <Button
+              href={personalInfo.github}
+              variant="ghost"
+              size="lg"
+              isExternal
+              className="border border-[#E5E5EA]"
+              icon={<GithubIcon className="w-4 h-4" />}
+              aria-label="Visit Apurv Nimbarge GitHub profile"
+            >
+              GitHub
             </Button>
           </div>
 

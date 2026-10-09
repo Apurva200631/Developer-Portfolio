@@ -68,7 +68,7 @@ export function Footer() {
                   className="flex items-center gap-2 text-xs hover:text-[#1D1D1F] transition-colors"
                 >
                   <GithubIcon className="w-3.5 h-3.5 text-[#1D1D1F]" />
-                  <span>github.com/apurvnimbarge</span>
+                  <span>github.com/Apurva200631</span>
                 </a>
               </li>
               <li>

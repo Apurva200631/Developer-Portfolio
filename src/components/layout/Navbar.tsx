@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { navigationItems } from '@/content/portfolio-data';
+import { navigationItems, personalInfo } from '@/content/portfolio-data';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { GithubIcon } from '@/components/common/Icons';
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -69,7 +70,17 @@ export function Navbar() {
           </nav>
 
           {/* Desktop Right CTA */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-2.5">
+            <a
+              href={personalInfo.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center p-2 rounded-full text-[#1D1D1F] hover:bg-[#F5F5F7] border border-[#E5E5EA] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0071E3]"
+              aria-label={`Visit Apurv Nimbarge GitHub profile (@${personalInfo.githubUsername})`}
+            >
+              <GithubIcon className="w-4 h-4" />
+            </a>
+
             <Link
               href="#contact"
               className="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-full bg-[#1D1D1F] text-white hover:bg-[#333336] active:bg-[#000000] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0071E3]"
@@ -111,7 +122,19 @@ export function Navbar() {
                 <span className="text-[#86868B] text-xs">→</span>
               </Link>
             ))}
-            <div className="pt-3 mt-2 border-t border-[#E5E5EA]">
+            <div className="pt-3 mt-2 border-t border-[#E5E5EA] flex flex-col gap-2">
+              <a
+                href={personalInfo.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-[#F5F5F7] text-[#1D1D1F] text-sm font-semibold hover:bg-[#E5E5EA] transition-colors border border-[#E5E5EA]"
+                aria-label={`Open GitHub profile @${personalInfo.githubUsername}`}
+              >
+                <GithubIcon className="w-4 h-4" />
+                <span>GitHub (@{personalInfo.githubUsername})</span>
+              </a>
+
               <Link
                 href="#contact"
                 onClick={() => setMobileMenuOpen(false)}

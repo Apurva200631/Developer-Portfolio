@@ -15,7 +15,44 @@ export interface ProjectItem {
   highlights: string[];
   link?: string;
   github?: string;
-  featured: boolean;
+  featured?: boolean;
+}
+
+export interface VerifiedProject {
+  id: string;
+  title: string;
+  repoName: string;
+  category: string;
+  tagline: string;
+  description: string;
+  technologies: string[];
+  role: string;
+  highlights: string[];
+  githubUrl: string;
+  liveUrl?: string;
+  visualType: 'ai-vision' | 'tourism-portal' | 'pilgrim-portal' | 'css-system' | 'architecture';
+  isProminent?: boolean;
+}
+
+export interface VerifiedRepository {
+  name: string;
+  description: string;
+  language: string;
+  githubUrl: string;
+  liveUrl?: string;
+  topics?: string[];
+}
+
+export interface SkillItem {
+  name: string;
+  verifiedContext?: string;
+}
+
+export interface SkillCategory {
+  id: string;
+  title: string;
+  description: string;
+  skills: SkillItem[];
 }
 
 export interface FocusArea {

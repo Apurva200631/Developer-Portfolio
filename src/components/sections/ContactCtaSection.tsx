@@ -95,9 +95,10 @@ export function ContactCtaSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold bg-[#F5F5F7] text-[#1D1D1F] hover:bg-[#E5E5EA] transition-colors border border-[#E5E5EA]"
+                aria-label={`Visit Apurv Nimbarge GitHub profile (@${personalInfo.githubUsername})`}
               >
                 <GithubIcon className="w-4 h-4" />
-                <span>GitHub Profile</span>
+                <span>GitHub (@{personalInfo.githubUsername})</span>
               </a>
 
               <a

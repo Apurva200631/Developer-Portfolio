@@ -11,9 +11,11 @@ export const personalInfo = {
   detailedBio:
     'Apurv Nimbarge is an AI/ML undergraduate at MIT Vishwaprayag University and Chief Technology Officer at Orbion Technologies. Balancing academic rigor in artificial intelligence and machine learning with practical technology leadership, Apurv focuses on building robust software architectures, product-oriented development, and pragmatic intelligent applications.',
   email: 'apurvnimbarge@orbiontechnologies.com', // Realistic professional contact
-  github: 'https://github.com/apurvnimbarge',
+  github: 'https://github.com/Apurva200631',
+  githubUsername: 'Apurva200631',
+  publicReposCount: 20,
   linkedin: 'https://linkedin.com/in/apurvnimbarge',
-  location: 'Maharashtra, India',
+  location: 'Solapur, Maharashtra, India',
 };
 
 export const navigationItems: NavItem[] = [
