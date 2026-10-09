@@ -123,7 +123,7 @@ export function ContactCtaSection() {
                     <>
                       <a
                         href={channel.href}
-                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full text-xs font-semibold bg-[#1D1D1F] text-white hover:bg-[#333336] active:bg-[#000000] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0071E3]"
+                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 min-h-[44px] rounded-full text-xs font-semibold bg-[#1D1D1F] text-white hover:bg-[#333336] active:bg-[#000000] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0071E3]"
                         aria-label={`Send email to ${channel.value}`}
                       >
                         <Mail className="w-3.5 h-3.5" />
@@ -133,7 +133,7 @@ export function ContactCtaSection() {
                       <button
                         type="button"
                         onClick={() => handleCopy(channel.id, channel.value)}
-                        className="inline-flex items-center justify-center p-2.5 rounded-full text-xs font-medium bg-white border border-[#D2D2D7] text-[#1D1D1F] hover:bg-[#F5F5F7] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0071E3]"
+                        className="inline-flex items-center justify-center p-2.5 min-w-[44px] min-h-[44px] rounded-full text-xs font-medium bg-white border border-[#D2D2D7] text-[#1D1D1F] hover:bg-[#F5F5F7] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0071E3]"
                         aria-label={`Copy email ${channel.value}`}
                         title="Copy email address"
                       >
@@ -149,7 +149,7 @@ export function ContactCtaSection() {
                       href={channel.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full text-xs font-semibold bg-[#1D1D1F] text-white hover:bg-[#333336] active:bg-[#000000] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0071E3]"
+                      className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 min-h-[44px] rounded-full text-xs font-semibold bg-[#1D1D1F] text-white hover:bg-[#333336] active:bg-[#000000] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0071E3]"
                       aria-label={`Open ${channel.name} profile in new tab`}
                     >
                       <span>Open {channel.name}</span>

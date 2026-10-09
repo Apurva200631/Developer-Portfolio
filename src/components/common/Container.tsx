@@ -14,9 +14,9 @@ export function Container({
 }: ContainerProps) {
   const sizeClasses = {
     narrow: 'max-w-3xl',
-    default: 'max-w-5xl',
-    wide: 'max-w-6xl',
-    prose: 'max-w-2xl',
+    default: 'max-w-5xl xl:max-w-6xl',
+    wide: 'max-w-6xl 2xl:max-w-7xl',
+    prose: 'max-w-2xl lg:max-w-3xl',
   };
 
   return (

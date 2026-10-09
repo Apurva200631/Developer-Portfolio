@@ -31,28 +31,28 @@ export function Button({
   ...props
 }: ButtonProps) {
   const sizeClasses = {
-    sm: 'text-xs px-3.5 py-1.5 gap-1.5',
-    md: 'text-sm px-5 py-2.5 gap-2',
-    lg: 'text-base px-6 py-3.5 gap-2.5',
+    sm: 'text-xs px-3.5 py-2 min-h-[36px] gap-1.5',
+    md: 'text-sm px-5 py-2.5 min-h-[44px] gap-2',
+    lg: 'text-base px-6 py-3.5 min-h-[48px] gap-2.5',
   };
 
   const variantClasses = {
     primary:
-      'bg-[#1D1D1F] text-white hover:bg-[#333336] active:bg-[#000000] shadow-sm',
+      'bg-[#1D1D1F] text-white hover:bg-[#333336] active:bg-[#000000] shadow-sm hover:shadow',
     secondary:
       'bg-[#F5F5F7] text-[#1D1D1F] hover:bg-[#E5E5EA] active:bg-[#D2D2D7] border border-[#E5E5EA]',
     accent:
-      'bg-[#0071E3] text-white hover:bg-[#0077ED] active:bg-[#0062C4] shadow-sm',
+      'bg-[#0071E3] text-white hover:bg-[#0077ED] active:bg-[#0062C4] shadow-sm hover:shadow',
     ghost:
       'bg-transparent text-[#1D1D1F] hover:bg-[#F5F5F7] active:bg-[#E5E5EA]',
     link:
-      'bg-transparent text-[#0071E3] hover:underline p-0 h-auto rounded-none',
+      'bg-transparent text-[#0071E3] hover:underline p-0 h-auto rounded-none min-h-0',
   };
 
   const baseClasses =
     variant === 'link'
-      ? `inline-flex items-center font-medium transition-colors focus-visible:ring-2 focus-visible:ring-[#0071E3] focus-visible:outline-none ${className}`
-      : `inline-flex items-center justify-center font-medium rounded-full transition-all duration-200 focus-visible:ring-2 focus-visible:ring-[#0071E3] focus-visible:outline-none select-none ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
+      ? `group inline-flex items-center font-medium transition-colors focus-visible:ring-2 focus-visible:ring-[#0071E3] focus-visible:outline-none ${className}`
+      : `group inline-flex items-center justify-center font-medium rounded-full transition-all duration-200 focus-visible:ring-2 focus-visible:ring-[#0071E3] focus-visible:outline-none select-none ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
 
   if ('href' in props && props.href) {
     const { href, isExternal, ...rest } = props as ButtonAsLink;
@@ -65,16 +65,16 @@ export function Button({
           rel="noopener noreferrer"
           {...rest}
         >
-          {children}
-          {icon && <span className="inline-flex shrink-0">{icon}</span>}
+          <span>{children}</span>
+          {icon && <span className="inline-flex shrink-0 transition-transform duration-200 group-hover:translate-x-0.5">{icon}</span>}
         </a>
       );
     }
 
     return (
       <Link href={href} className={baseClasses} {...rest}>
-        {children}
-        {icon && <span className="inline-flex shrink-0">{icon}</span>}
+        <span>{children}</span>
+        {icon && <span className="inline-flex shrink-0 transition-transform duration-200 group-hover:translate-x-0.5">{icon}</span>}
       </Link>
     );
   }
@@ -82,8 +82,8 @@ export function Button({
   const buttonProps = props as ButtonAsButton;
   return (
     <button className={baseClasses} {...buttonProps}>
-      {children}
-      {icon && <span className="inline-flex shrink-0">{icon}</span>}
+      <span>{children}</span>
+      {icon && <span className="inline-flex shrink-0 transition-transform duration-200 group-hover:translate-x-0.5">{icon}</span>}
     </button>
   );
 }

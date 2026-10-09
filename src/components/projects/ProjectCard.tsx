@@ -95,7 +95,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           </div>
 
           {/* Action Links (GitHub Repo + Live Demo) */}
-          <div className="pt-4 flex flex-wrap items-center gap-3">
+          <div className="pt-4 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3">
             <Button
               href={project.githubUrl}
               variant="primary"

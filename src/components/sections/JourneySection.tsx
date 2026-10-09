@@ -32,7 +32,7 @@ export function JourneySection() {
           {journeyMilestones.map((milestone, idx) => (
             <div key={idx} className="relative group">
               {/* Dot indicator */}
-              <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-white border-2 border-[#0071E3] group-hover:scale-125 transition-transform shadow-xs" />
+              <div className="absolute -left-[32px] sm:-left-[48px] top-1.5 w-4 h-4 rounded-full bg-white border-2 border-[#0071E3] group-hover:scale-125 transition-transform shadow-xs" />
 
               <div className="p-6 sm:p-8 rounded-3xl bg-[#FBFBFD] border border-[#E5E5EA] hover:border-[#D2D2D7] transition-all duration-300 max-w-3xl">
                 <div className="flex flex-wrap items-center justify-between gap-3 mb-4">

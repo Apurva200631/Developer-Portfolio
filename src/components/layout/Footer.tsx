@@ -65,7 +65,7 @@ export function Footer() {
                 href={personalInfo.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2.5 p-2 rounded-xl bg-white border border-[#E5E5EA] hover:border-[#D2D2D7] text-[#1D1D1F] transition-colors"
+                className="flex items-center gap-2.5 p-2.5 min-h-[44px] rounded-xl bg-white border border-[#E5E5EA] hover:border-[#D2D2D7] text-[#1D1D1F] transition-colors"
                 aria-label="GitHub Profile (@Apurva200631)"
               >
                 <GithubIcon className="w-4 h-4 text-[#1D1D1F] shrink-0" />
@@ -80,7 +80,7 @@ export function Footer() {
                 href={personalInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2.5 p-2 rounded-xl bg-white border border-[#E5E5EA] hover:border-[#D2D2D7] text-[#1D1D1F] transition-colors"
+                className="flex items-center gap-2.5 p-2.5 min-h-[44px] rounded-xl bg-white border border-[#E5E5EA] hover:border-[#D2D2D7] text-[#1D1D1F] transition-colors"
                 aria-label="LinkedIn Profile"
               >
                 <LinkedinIcon className="w-4 h-4 text-[#0071E3] shrink-0" />
@@ -95,7 +95,7 @@ export function Footer() {
                 href={personalInfo.x}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2.5 p-2 rounded-xl bg-white border border-[#E5E5EA] hover:border-[#D2D2D7] text-[#1D1D1F] transition-colors"
+                className="flex items-center gap-2.5 p-2.5 min-h-[44px] rounded-xl bg-white border border-[#E5E5EA] hover:border-[#D2D2D7] text-[#1D1D1F] transition-colors"
                 aria-label="X Profile (@apurv2116)"
               >
                 <XIcon className="w-4 h-4 text-[#1D1D1F] shrink-0" />
@@ -108,7 +108,7 @@ export function Footer() {
               {/* Personal Gmail */}
               <a
                 href={`mailto:${personalInfo.personalGmail}`}
-                className="flex items-center gap-2.5 p-2 rounded-xl bg-white border border-[#E5E5EA] hover:border-[#D2D2D7] text-[#1D1D1F] transition-colors"
+                className="flex items-center gap-2.5 p-2.5 min-h-[44px] rounded-xl bg-white border border-[#E5E5EA] hover:border-[#D2D2D7] text-[#1D1D1F] transition-colors"
                 aria-label={`Personal Gmail (${personalInfo.personalGmail})`}
               >
                 <GmailIcon className="w-4 h-4 shrink-0" />
@@ -121,7 +121,7 @@ export function Footer() {
               {/* Yahoo Mail */}
               <a
                 href={`mailto:${personalInfo.yahooMail}`}
-                className="flex items-center gap-2.5 p-2 rounded-xl bg-white border border-[#E5E5EA] hover:border-[#D2D2D7] text-[#1D1D1F] transition-colors"
+                className="flex items-center gap-2.5 p-2.5 min-h-[44px] rounded-xl bg-white border border-[#E5E5EA] hover:border-[#D2D2D7] text-[#1D1D1F] transition-colors"
                 aria-label={`Yahoo Mail (${personalInfo.yahooMail})`}
               >
                 <YahooIcon className="w-4 h-4 text-[#6001D2] shrink-0" />
@@ -134,7 +134,7 @@ export function Footer() {
               {/* Orbion Company Email */}
               <a
                 href={`mailto:${personalInfo.orbionEmail}`}
-                className="flex items-center gap-2.5 p-2 rounded-xl bg-white border border-[#0071E3]/40 ring-1 ring-[#0071E3]/20 hover:border-[#0071E3] text-[#1D1D1F] transition-colors"
+                className="flex items-center gap-2.5 p-2.5 min-h-[44px] rounded-xl bg-white border border-[#0071E3]/40 ring-1 ring-[#0071E3]/20 hover:border-[#0071E3] text-[#1D1D1F] transition-colors"
                 aria-label={`Orbion Company Email (${personalInfo.orbionEmail})`}
               >
                 <GmailIcon className="w-4 h-4 shrink-0" />
