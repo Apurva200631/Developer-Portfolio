@@ -1,4 +1,4 @@
-import { NavItem, ProjectItem, FocusArea, JourneyMilestone } from '@/types';
+import { NavItem, ProjectItem, FocusArea, JourneyMilestone, ContactChannel } from '@/types';
 
 export const personalInfo = {
   name: 'Apurv Nimbarge',
@@ -10,11 +10,21 @@ export const personalInfo = {
     'Dedicated to building purposeful digital products, exploring intelligent systems, and driving technological architecture with clarity and precision.',
   detailedBio:
     'Apurv Nimbarge is an AI/ML undergraduate at MIT Vishwaprayag University and Chief Technology Officer at Orbion Technologies. Balancing academic rigor in artificial intelligence and machine learning with practical technology leadership, Apurv focuses on building robust software architectures, product-oriented development, and pragmatic intelligent applications.',
-  email: 'apurvnimbarge@orbiontechnologies.com', // Realistic professional contact
+  
+  // Exact Verified Contacts
+  email: 'apurvnimbarge800@gmail.com', // Personal Gmail
+  personalGmail: 'apurvnimbarge800@gmail.com',
+  yahooMail: 'apurvnimbarge.tech@yahoo.com',
+  orbionEmail: 'apurv.orbion@gmail.com',
+  
   github: 'https://github.com/Apurva200631',
   githubUsername: 'Apurva200631',
   publicReposCount: 20,
-  linkedin: 'https://linkedin.com/in/apurvnimbarge',
+  
+  linkedin: 'https://www.linkedin.com/in/apurva-nimbarge-a40310353',
+  x: 'https://x.com/apurv2116',
+  xHandle: '@apurv2116',
+  
   location: 'Solapur, Maharashtra, India',
 };
 
@@ -25,6 +35,74 @@ export const navigationItems: NavItem[] = [
   { label: 'Journey', href: '#journey' },
   { label: 'Orbion', href: '#orbion' },
   { label: 'Contact', href: '#contact' },
+];
+
+/**
+ * Verified Contact Destinations
+ * Every service has a recognizable brand logo and exact supplied destination URL.
+ */
+export const contactChannels: ContactChannel[] = [
+  {
+    id: 'linkedin',
+    name: 'LinkedIn',
+    label: 'Professional Network',
+    value: 'linkedin.com/in/apurva-nimbarge-a40310353',
+    href: 'https://www.linkedin.com/in/apurva-nimbarge-a40310353',
+    type: 'social',
+    service: 'linkedin',
+    description: 'Connect for professional networking and leadership discussions.',
+  },
+  {
+    id: 'github',
+    name: 'GitHub',
+    label: 'Code Repositories',
+    value: 'github.com/Apurva200631',
+    href: 'https://github.com/Apurva200631',
+    type: 'social',
+    service: 'github',
+    description: 'Explore 20 public repositories, laboratory experiments, and web projects.',
+  },
+  {
+    id: 'personal-gmail',
+    name: 'Personal Gmail',
+    label: 'Direct Correspondence',
+    value: 'apurvnimbarge800@gmail.com',
+    href: 'mailto:apurvnimbarge800@gmail.com',
+    type: 'email',
+    service: 'gmail',
+    description: 'Personal inbox for developer inquiries and direct technical communication.',
+  },
+  {
+    id: 'yahoo-mail',
+    name: 'Yahoo Mail',
+    label: 'Technical & Academic Mail',
+    value: 'apurvnimbarge.tech@yahoo.com',
+    href: 'mailto:apurvnimbarge.tech@yahoo.com',
+    type: 'email',
+    service: 'yahoo',
+    description: 'Secondary technical address for academic and development exchange.',
+  },
+  {
+    id: 'x',
+    name: 'X',
+    label: 'Social & Updates',
+    value: 'x.com/apurv2116',
+    href: 'https://x.com/apurv2116',
+    type: 'social',
+    service: 'x',
+    description: 'Follow technology discussions, software building thoughts, and updates.',
+  },
+  {
+    id: 'orbion-email',
+    name: 'Orbion Company Email',
+    label: 'Official Enterprise Inquiries',
+    value: 'apurv.orbion@gmail.com',
+    href: 'mailto:apurv.orbion@gmail.com',
+    type: 'email',
+    service: 'gmail',
+    isCompany: true,
+    description: 'Official channel for inquiries regarding Orbion Technologies and CTO office.',
+  },
 ];
 
 export const focusAreas: FocusArea[] = [
@@ -69,6 +147,37 @@ export const focusAreas: FocusArea[] = [
   },
 ];
 
+/**
+ * Professional Journey Milestones (Strictly Confirmed Facts Only)
+ * No fictional job positions, dates, milestones, awards, or employment history.
+ */
+export const journeyMilestones: JourneyMilestone[] = [
+  {
+    title: 'Chief Technology Officer (CTO)',
+    organization: 'Orbion Technologies',
+    description:
+      'Leading technology direction, system architecture, and engineering standards for digital platforms. Fostering a product development ethos that turns technical curiosity into stable software.',
+    type: 'leadership',
+    period: 'Current Leadership',
+  },
+  {
+    title: 'B.Tech in Artificial Intelligence & Machine Learning',
+    organization: 'MIT Vishwaprayag University',
+    description:
+      'Pursuing an undergraduate degree in Artificial Intelligence and Machine Learning. Coursework emphasizes machine intelligence, data structures, algorithms, mathematical foundations, and intelligent systems design.',
+    type: 'education',
+    period: 'Undergraduate Program',
+  },
+  {
+    title: 'Software Development & Applied AI/ML Practice',
+    organization: 'Technical Engineering Practice',
+    description:
+      'Practical development spanning computer vision applications (face-api.js), generative AI model integrations (@google/genai), and responsive web platforms deployed to production.',
+    type: 'engineering',
+    period: 'Ongoing Focus',
+  },
+];
+
 export const featuredProjects: ProjectItem[] = [
   {
     id: 'orbion-core-platform',
@@ -85,79 +194,5 @@ export const featuredProjects: ProjectItem[] = [
       'Scalable structure prepared for enterprise product iteration',
     ],
     featured: true,
-  },
-  {
-    id: 'intelligent-data-pipeline',
-    title: 'Applied ML Exploration Lab',
-    category: 'Machine Learning',
-    tagline: 'Exploratory implementations of foundational machine learning algorithms and data pipelines.',
-    description:
-      'A structured collection of machine learning workflows developed during coursework at MIT Vishwaprayag University, exploring feature engineering, supervised regression/classification, and model diagnostics.',
-    technologies: ['Python', 'NumPy', 'Pandas', 'Scikit-Learn', 'Matplotlib'],
-    role: 'AI/ML Student Researcher',
-    highlights: [
-      'Data preprocessing, normalizations, and exploratory data analysis',
-      'Implementation and evaluation of baseline predictive models',
-      'Performance benchmarking across precision, recall, and loss metrics',
-    ],
-    featured: true,
-  },
-  {
-    id: 'developer-system-ui',
-    title: 'Apple-Inspired Portfolio System',
-    category: 'Design Engineering',
-    tagline: 'Minimalist, content-focused developer portfolio built with modular design tokens.',
-    description:
-      'An intentional, editorial-style personal platform emphasizing typographic rhythm, restrained monochrome palettes, and robust accessibility standards.',
-    technologies: ['Next.js App Router', 'React 19', 'Tailwind CSS', 'TypeScript'],
-    role: 'Designer & Engineer',
-    highlights: [
-      'Refined light-theme design system with sub-pixel spacing precision',
-      'Semantic HTML5 structure ensuring high accessibility compliance',
-      'Responsive multi-viewport adaptation without visual clutter',
-    ],
-    featured: true,
-  },
-];
-
-export const journeyMilestones: JourneyMilestone[] = [
-  {
-    year: 'Present',
-    title: 'Chief Technology Officer',
-    organization: 'Orbion Technologies',
-    description:
-      'Leading technological initiatives, defining architecture benchmarks, and steering product development workflows.',
-    type: 'leadership',
-  },
-  {
-    year: '2023 — Present',
-    title: 'B.Tech in Artificial Intelligence & Machine Learning',
-    organization: 'MIT Vishwaprayag University',
-    description:
-      'Undergraduate studies focused on machine intelligence, algorithmic foundations, computer science theory, and data structures.',
-    type: 'education',
-  },
-  {
-    year: 'Ongoing',
-    title: 'Independent Software Craft & Research',
-    organization: 'Personal Engineering Practice',
-    description:
-      'Continuous experimentation with modern frontend ecosystems, systems design, and applied machine learning tools.',
-    type: 'engineering',
-  },
-];
-
-export const skillCategories = [
-  {
-    category: 'Artificial Intelligence & Data',
-    skills: ['Python', 'Machine Learning Foundations', 'Data Preprocessing', 'Model Evaluation', 'NumPy / Pandas', 'Algorithm Design'],
-  },
-  {
-    category: 'Web & Software Engineering',
-    skills: ['TypeScript', 'JavaScript (ESNext)', 'Next.js (App Router)', 'React 19', 'Tailwind CSS', 'HTML5 / Modern CSS'],
-  },
-  {
-    category: 'Architecture & Leadership',
-    skills: ['System Architecture', 'Technical Strategy', 'Design Systems', 'Code Review & Standards', 'Git & Version Control', 'Product Thinking'],
   },
 ];

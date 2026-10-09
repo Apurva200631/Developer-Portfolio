@@ -65,9 +65,21 @@ export interface FocusArea {
 }
 
 export interface JourneyMilestone {
-  year: string;
   title: string;
   organization: string;
   description: string;
   type: 'education' | 'leadership' | 'engineering';
+  period?: string;
+}
+
+export interface ContactChannel {
+  id: string;
+  name: string;
+  label: string;
+  value: string;
+  href: string;
+  type: 'email' | 'social';
+  service: 'linkedin' | 'github' | 'gmail' | 'yahoo' | 'x';
+  description: string;
+  isCompany?: boolean;
 }

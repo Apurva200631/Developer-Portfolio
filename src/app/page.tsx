@@ -5,7 +5,8 @@ import { HeroSection } from '@/components/sections/HeroSection';
 import { OverviewSection } from '@/components/sections/OverviewSection';
 import { FeaturedProjectsSection } from '@/components/sections/FeaturedProjectsSection';
 import { SkillsSection } from '@/components/sections/SkillsSection';
-import { FocusJourneySection } from '@/components/sections/FocusJourneySection';
+import { JourneySection } from '@/components/sections/JourneySection';
+import { OrbionSection } from '@/components/sections/OrbionSection';
 import { ContactCtaSection } from '@/components/sections/ContactCtaSection';
 
 export default function HomePage() {
@@ -28,7 +29,8 @@ export default function HomePage() {
         <OverviewSection />
         <FeaturedProjectsSection />
         <SkillsSection />
-        <FocusJourneySection />
+        <JourneySection />
+        <OrbionSection />
         <ContactCtaSection />
       </main>
 
