@@ -79,6 +79,9 @@ Built with an intentional, minimalist Apple-inspired light-theme aesthetic, dete
 │       └── index.ts            # Strict TypeScript interfaces
 ├── .env.example                # Zero-secret environment template
 ├── .gitignore                  # Git exclusion rules
+├── .nvmrc                      # Node.js LTS version declaration (v20)
+├── netlify.toml                # Netlify build configuration & security headers
+├── render.yaml                 # Render Blueprint specification
 ├── package.json
 └── tsconfig.json
 ```
@@ -88,7 +91,7 @@ Built with an intentional, minimalist Apple-inspired light-theme aesthetic, dete
 ## 💻 Getting Started (Local Development)
 
 ### Prerequisites
-- **Node.js:** v18.18.0 or later (Node.js v20+ recommended)
+- **Node.js:** v18.18.0 or later (Node.js v20 LTS recommended, declared in `.nvmrc`)
 - **npm:** v9.0.0 or later
 
 ### Installation
@@ -129,34 +132,58 @@ npm run start
 
 ## 🌐 Production Deployment Guides
 
-### 1. Vercel (Recommended for Next.js)
-The repository is natively configured for Vercel with zero additional configuration:
+### 1. Vercel (Recommended — Zero-Config)
+The repository is natively configured for Vercel with zero additional configuration files required:
 1. Push your repository to GitHub (`Apurva200631/DEV-portfolio`).
 2. Log into [vercel.com](https://vercel.com) and click **"Add New Project"**.
 3. Import the repository.
 4. Framework Preset will auto-detect as **Next.js**.
 5. Build Command: `npm run build`
 6. Output Directory: `.next`
-7. Click **Deploy**.
+7. Node.js Version: Auto-detected as **20.x** via `.nvmrc`.
+8. *(Optional)* Set Environment Variable: `NEXT_PUBLIC_SITE_URL` = `https://your-domain.vercel.app` (or your custom domain).
+9. Click **Deploy**.
 
 ### 2. Netlify
-1. Connect your repository in the Netlify Dashboard.
-2. Build Command: `npm run build`
-3. Publish Directory: `.next`
-4. Netlify will automatically enable the `@netlify/plugin-nextjs` adapter for App Router support.
+The repository includes a dedicated `netlify.toml` file pre-configured for Netlify:
+1. Log into [netlify.com](https://netlify.com) and click **"Add new site" > "Import an existing project"**.
+2. Connect your GitHub repository (`Apurva200631/DEV-portfolio`).
+3. Netlify will read `netlify.toml` automatically:
+   - Build command: `npm run build`
+   - Publish directory: `.next`
+   - Node.js runtime: Node 20 via `.nvmrc`
+4. Under **Site Configuration > Environment Variables**, optionally add:
+   - `NEXT_PUBLIC_SITE_URL`: `https://your-site.netlify.app`
+5. Click **Deploy site**.
 
 ### 3. Render
-1. Create a new **Web Service** in Render connected to your GitHub repository.
-2. Environment: **Node**
-3. Build Command:
+The repository includes a pre-configured `render.yaml` Blueprint specification for a Node.js Web Service:
+- **Blueprint Deployment:**
+  1. In the Render Dashboard, click **New > Blueprint**.
+  2. Connect `Apurva200631/DEV-portfolio`.
+  3. Render detects `render.yaml` and provisions the Web Service automatically.
+- **Manual Web Service Setup:**
+  1. Click **New > Web Service**.
+  2. Runtime: **Node**.
+  3. Build Command: `npm install && npm run build` (or `npm ci && npm run build`).
+  4. Start Command: `npm run start` (Next.js automatically binds to Render's injected `$PORT`).
+  5. Environment Variables:
+     - `NODE_ENV`: `production`
+     - *(Optional)* `NEXT_PUBLIC_SITE_URL`: `https://your-service.onrender.com`
+  6. Click **Create Web Service**.
+
+### 4. GitHub Source Control & Publishing
+1. Ensure your local branch is clean:
    ```bash
-   npm install && npm run build
+   git status
    ```
-4. Start Command:
+2. Link your remote repository and push to GitHub:
    ```bash
-   npm run start -- --port $PORT
+   git remote add origin https://github.com/Apurva200631/DEV-portfolio.git
+   git branch -M master
+   git push -u origin master
    ```
-5. Instance Type: Free or Starter tier.
+3. Connecting this repository to Vercel, Netlify, or Render will configure automatic CI/CD preview builds on every `git push`.
 
 ---
 

@@ -21,7 +21,13 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://apurvanimbarge.com";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: "/",
+  },
   title: "Apurv Nimbarge — AI/ML Student • Developer • CTO at Orbion Technologies",
   description:
     "Official developer portfolio of Apurv Nimbarge. B.Tech Artificial Intelligence & Machine Learning student at MIT Vishwaprayag University and Chief Technology Officer at Orbion Technologies.",
@@ -48,6 +54,7 @@ export const metadata: Metadata = {
     title: "Apurv Nimbarge — AI/ML Student • Developer • CTO at Orbion Technologies",
     description:
       "Official developer portfolio of Apurv Nimbarge. B.Tech Artificial Intelligence & Machine Learning student at MIT Vishwaprayag University and Chief Technology Officer at Orbion Technologies.",
+    url: siteUrl,
     siteName: "Apurv Nimbarge Portfolio",
     type: "website",
     locale: "en_US",
@@ -77,6 +84,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Apurv Nimbarge",
+  url: siteUrl,
   jobTitle: "Chief Technology Officer",
   worksFor: {
     "@type": "Organization",

@@ -1,13 +1,14 @@
 import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Use relative route or root
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://apurvanimbarge.com';
   return [
     {
-      url: '/',
+      url: `${siteUrl}`,
       lastModified: new Date('2026-10-09'),
       changeFrequency: 'weekly',
       priority: 1.0,
     },
   ];
 }
+
